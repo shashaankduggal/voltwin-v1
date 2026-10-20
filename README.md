@@ -15,6 +15,14 @@
 > 2. **AI / Machine Learning Engineering:** 16-feature domain-informed pipeline, Leave-One-Cell-Out Cross-Validation (LOCV), Isolation Forest anomaly detection, and sub-millisecond in-JVM native **ONNX** model execution.
 > 3. **Java Full-Stack Software Engineering (SDE):** Reactive Spring Boot 3.4.3 microservice with clean architecture, automated ETL database ingestion, real-time WebSocket STOMP telemetry broadcast, and an interactive React + TypeScript cockpit.
 
+## Product screenshots
+
+![VoltTwin calculator header](docs/images/volttwin-header.png)
+
+![VoltTwin reliability dashboard](docs/images/volttwin-dashboard.png)
+
+![VoltTwin telemetry input panel](docs/images/volttwin-telemetry-inputs.png)
+
 ---
 
 ## Table of Contents
