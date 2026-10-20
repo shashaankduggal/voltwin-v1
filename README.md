@@ -34,7 +34,6 @@
 6. [Repository Structure](#6-repository-structure)
 7. [Step-by-Step Installation & Run Guide](#7-step-by-step-installation--run-guide)
 8. [API & WebSocket Specification](#8-api--websocket-specification)
-9. [Interview Placement Cheat-Sheet](#9-interview-placement-cheat-sheet)
 
 ---
 
