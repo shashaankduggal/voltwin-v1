@@ -1,0 +1,8 @@
+{
+    "beta_shape": 4.8488,
+    "eta_scale_cycles": 135.91,
+    "mttf_cycles": 124.56,
+    "b10_life_cycles": 85.44,
+    "b50_life_cycles": 126.01,
+    "failure_mode": "Wear-out Degradation (Increasing Hazard Rate)"
+}

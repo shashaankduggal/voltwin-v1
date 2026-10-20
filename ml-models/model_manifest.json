@@ -1,0 +1,47 @@
+{
+    "pipeline": "VoltTwin AI/ML Prognostics",
+    "training_samples": 636,
+    "feature_count": 16,
+    "features": [
+        "cycle",
+        "ambient_temperature",
+        "min_voltage",
+        "avg_voltage",
+        "max_temp_c",
+        "avg_temp_c",
+        "duration_sec",
+        "estimated_r_int_ohms",
+        "delta_temp_c",
+        "joule_heating_watts",
+        "capacity_fade_rate",
+        "cumulative_capacity_loss",
+        "voltage_sag",
+        "r_int_growth_rate",
+        "energy_wh",
+        "thermal_stress_cumulative"
+    ],
+    "models": {
+        "soh_regressor": {
+            "target": "State of Health (%)",
+            "algorithm": "GradientBoostingRegressor (300 trees, depth=5, lr=0.05)",
+            "locv_avg_mae": 0.8714,
+            "locv_avg_rmse": 1.093,
+            "locv_avg_r2": 0.9846,
+            "onnx_file": "soh_regressor.onnx"
+        },
+        "rul_regressor": {
+            "target": "Remaining Useful Life (cycles)",
+            "algorithm": "GradientBoostingRegressor (300 trees, depth=5, lr=0.05)",
+            "locv_avg_mae": 15.4314,
+            "locv_avg_rmse": 18.8605,
+            "locv_avg_r2": 0.7505,
+            "onnx_file": "rul_regressor.onnx"
+        },
+        "anomaly_detector": {
+            "algorithm": "IsolationForest (200 trees, contamination=0.05)",
+            "training_scope": "First 40% of each cell lifecycle (healthy baseline)",
+            "anomalies_detected": 347,
+            "joblib_file": "anomaly_detector.joblib"
+        }
+    }
+}
